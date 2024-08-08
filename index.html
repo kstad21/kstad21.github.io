@@ -17,12 +17,6 @@
             display: none !important;
         }
 
-        .popup {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-        }
-
         .popup-content {
             background-color: #fefefe;
             margin: 15% auto;
@@ -41,7 +35,6 @@
         .close:hover,
         .close:focus {
             color: black;
-            text-decoration: dashed;
             cursor: pointer;
         }
 
@@ -56,8 +49,9 @@
 
         button {
             background-color: #4CAF50;
+            width: 25%;
+            height: 50%;
             color: white;
-            border: none;
             cursor: pointer;
         }
 
@@ -66,50 +60,35 @@
         }
 
         #legend {
-            border: 3px solid #d3d3d3;
-            border-radius: 5px;
+            border: 1px solid #000000;
+            border-radius: 1px;
             width: 175px;
+            position: fixed;
+            top: 50%;
+            right: 10%;
+            height: 200px;
+            padding: 10px;
+            justify-content: center;
         }
 
-        #legend-states p:last-child {
-            margin-bottom: 0;
-        }
-
-        #time-input {
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        #time {
-            display:flex;
-        }
-
-        #time-enter {
-            width: 100%;
+        #choiceOne {
+            border: 1px solid #000000;
+            background-color:cornflowerblue;
+            border-radius: 20px;
+            width: 75%;
+            height: 10%;
+            box-sizing: border-box;
         }
 
         #header {
             text-align: center;
             margin-bottom: 100px;
-            /*this makes it not do an enter!! display: flex;*/
-        }
-
-        #version {
-            font-size: large;
         }
 
         #instructions {
             margin-bottom: 20;
             text-align: center;
         }
-
-        #tag {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            margin-right: 1rem;
-        }
-
 
     </style>
 
@@ -123,7 +102,7 @@
     </div>
 
     <div id="instructions-container">
-        <p id="instructions">Choose the action you want to take from the legend!</p>
+        <p id="instructions">Choose the action you want to take from the legend! Or, upload attendance!</p>
     </div>
 
     <button id="popupButton">Upload attendance</button>
@@ -131,12 +110,14 @@
         <div class="popup-content">
             <span class="close" id="closePopup">&times;</span>
             <p>Copy and paste the attendance page from RedRock today.</p>
-            <input type="text" id="userName" placeholder="Copy and paste here">
+            <input type="text" id="attendance" placeholder="Copy and paste here">
             <button id="submitBtn">Submit</button>
         </div>
     </div>
     
-
+    <div id="legend">
+        <button id="choiceOne">Choice 1</button>
+    </div>
 
 
 
@@ -146,7 +127,7 @@
         const popupButton = document.getElementById('popupButton');
         const closePopup = document.getElementById('closePopup');
         const submitBtn = document.getElementById('submitBtn');
-        const userNameInput = document.getElementById('userName');
+        const attendanceInput = document.getElementById('attendance');
 
         popupButton.addEventListener('click', function() {
             popup.style.display = 'block';
@@ -157,8 +138,8 @@
         });
 
         submitBtn.addEventListener('click', function() {
-            const userName = userNameInput.value;
-            alert("Thanks for submitting!");
+            const attendance = attendanceInput.value;
+            alert("Thanks for submitting!" + attendance);
             popup.style.display = 'none';
         })
 
