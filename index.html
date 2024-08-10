@@ -1,69 +1,127 @@
 <!DOCTYPE html>
-
+<html>
 <head>
+<style>
+@font-face { 
+    font-family: Blackout Sunrise; 
+    src: url('Blackout Sunrise.ttf'); 
+} 
 
-    <title>Katy Stadler's Personal Site</title>
-    <style>
-        body {
-            margin-left: 2%;
-            min-height: 100vh;
-            display: flex;
-            height: 5%;
-            max-width: 30%;
-            flex-direction: column;
-            background-image: url('lake-sky-1.png');
-            background-size: cover;
-        }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
 
-        .hidden {
-            display: none !important;
-        }
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between title and nav items */
+    align-items: center;
+    background-color: #333;
+    padding: 0 20px; /* Adjust as needed */
+    max-height: 60px;
+    width: 100%;
+}
 
-        #title {
-            margin-bottom: 5px;
-            top: 10%;
-            color:rgb(93, 165, 198);
-        }
+#website-title {
+    color: rgb(181, 223, 255);
+    font-family: Blackout Sunrise;
+    font-size: 40px;
+    margin: 0; /* Reset margin for better alignment */
+}
 
-        #version {
-            margin: 0%;
-            color: rgb(93, 165, 198);
-        }
+* {
+    box-sizing: border-box;
+}
 
-        #options {
-            color:rgb(93, 165, 198);
-        }
+nav {
+    display: flex;
+    align-items: center;
+}
 
-        #option1 {
-            color: rgb(93, 165, 198);
-        }
-        
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
 
-    </style>
+li {
+    position: relative; /* Position relative to handle absolute positioning of dropdowns */
+}
 
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Blackout Sunrise;
+    font-size: 25px;
+}
 
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(181, 223, 255);
+    color: #333;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Align dropdown to the right of its parent */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    max-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 18px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+img {
+    max-width: 100%; /* Ensures the image will scale down if too large */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+#headshot {
+    max-width: 100%;
+    height: 25%;
+    width: 25%;
+    padding: 1%;
+}
+</style>
 </head>
-
 <body>
-    <div id="header">
-        <h1 id="title" style="font-family:verdana">Katy Stadler</h1>
-        <p id="version">Personal Site</p>
-    </div>
 
-    <form action="/action_page.php">
-        <label for="options">Options:</label>
-        <select name="options" id="options">
-            <option value="option1">option1</option>
-            <option value="option2">option2</option>
-            <option value="option3">option3</option>
-        </select>
-        <br><br>
-        <input type="submit" value="Submit">
-    </form>
+<div class="header">
+    <h1 id="website-title">Kate Stadler</h1>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                <div class="dropdown-content">
+                    <a href="ctcenter.html">CT center</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </li>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+</div>
 
-    <script>
-        
+<img id="headshot" src="headshot.png" alt="headshot">
 
-    </script>
 </body>
-
+</html>
