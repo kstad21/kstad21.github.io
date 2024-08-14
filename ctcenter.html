@@ -6,12 +6,15 @@
     <title>home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
-</head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
 <body>
     <nav class="navbar">
+        <div class="page-title">
+            hello
+        </div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li class="dropdown">
@@ -27,11 +30,11 @@
     </nav>
     <div class="scrollable-box">
         <div class="tabs">
-            <button class="tab-button" onclick="openTab(event, 'tab1')">Tab 1</button>
+            <button class="tab-button" onclick="openTab(event, 'Center.java')">Center.java</button>
             <button class="tab-button" onclick="openTab(event, 'tab2')">Tab 2</button>
             <button class="tab-button" onclick="openTab(event, 'tab3')">Tab 3</button>
         </div>
-        <div id="tab1" class="tab-content">
+        <div id="Center.java" class="tab-content">
             <pre><code class="language-java">
                 import java.io.BufferedReader;
                 import java.io.IOException;

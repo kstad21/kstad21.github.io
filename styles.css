@@ -141,7 +141,7 @@ pre {
 }
 
 code {
-    display: block;
+    display: flex;
     white-space: pre-wrap; /* Ensures long lines wrap correctly */
 }
 
@@ -171,4 +171,9 @@ code {
 .tab-content {
     display: none;
     padding: 10px;
+}
+
+.page-title {
+    position: absolute;
+    color:#ffffff;
 }
