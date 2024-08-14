@@ -1,127 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-@font-face { 
-    font-family: Blackout Sunrise; 
-    src: url('Blackout Sunrise.ttf'); 
-} 
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between; /* Space between title and nav items */
-    align-items: center;
-    background-color: #333;
-    padding: 0 20px; /* Adjust as needed */
-    max-height: 60px;
-    width: 100%;
-}
-
-#website-title {
-    color: rgb(181, 223, 255);
-    font-family: Blackout Sunrise;
-    font-size: 40px;
-    margin: 0; /* Reset margin for better alignment */
-}
-
-* {
-    box-sizing: border-box;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-li {
-    position: relative; /* Position relative to handle absolute positioning of dropdowns */
-}
-
-li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: Blackout Sunrise;
-    font-size: 25px;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(181, 223, 255);
-    color: #333;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0; /* Align dropdown to the right of its parent */
-    background-color: #f9f9f9;
-    min-width: 160px;
-    max-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 18px;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1;}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-img {
-    max-width: 100%; /* Ensures the image will scale down if too large */
-    height: auto; /* Maintains the aspect ratio */
-}
-
-#headshot {
-    max-width: 100%;
-    height: 25%;
-    width: 25%;
-    padding: 1%;
-}
-</style>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 <body>
-
-<div class="header">
-    <h1 id="website-title">Kate Stadler</h1>
-    <nav>
+    <nav class="navbar">
         <ul>
+            <li><a href="index.html">Home</a></li>
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                <a href="#projects" class="dropbtn">Projects</a>
                 <div class="dropdown-content">
-                    <a href="ctcenter.html">CT center</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <a href="ctcenter.html">Scheduling/Tutoring Software</a>
+                    <a href="rsrch.html">Increasing the User-Friendliness of End-To-End Epidemic Simulations</a>
+                    <a href="airbnb.html">Data Science: Causes of an Airbnb's Success</a>
+                    <a href="cse15l.html">Lab: Software Tools and Techniques</a>
                 </div>
             </li>
-            <li><a href="index.html">Home</a></li>
         </ul>
     </nav>
-</div>
-
-<img id="headshot" src="headshot.png" alt="headshot">
-
+    <div class="container">
+        <div class="left-column">
+            <img src="headshot.png" alt="Katy Stadler" class="profile-image">
+            <div class="contact-info">
+                <p>Kate Stadler (or Katy)</p>
+                <p><i class="fas fa-envelope"></i> kstadler@ucsd.edu</p>
+                <p><i class="fas fa-phone"></i> (650) 410 0510</p>
+            </div>
+        </div>
+        <div class="right-column">
+            <h1 style="font-family: Blackout Sunrise; font-size: 40px">About Me</h1>
+            <p style="font-size: 20px">Hello! I am a third-year Cognitive and Computer Science student at University of California San Diego. I have more than 4 years of CS tutoring experience, and I have worked for UCSD's CSE department tutoring Python. I love learning about the way we think, especially about how neuromodulation guides our memories and our learning through the strengthening or weakening of connections. I love coding and am a mix of self-taught and school-taught in Java, Python, C, JavaScript, HTML, and CSS. I recently discovered my love for visualizing, analyzing, and representing data, so I have experience with Seaborn, Pandas, scikit-learn, matplotlib, and more. In my free time, I love to watch football and basketball (Go Niners!). Check out my projects for a mix of my research experience, personal projects, and school projects.</p>
+        </div>
+    </div>
 </body>
 </html>
