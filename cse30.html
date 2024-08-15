@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar">
         <div class="page-title">
-            Software Tools and Techniques Lab
+            Computer Organization and Systems Programming Class
         </div>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -31,35 +31,86 @@
     </nav>
     <div class="container">
         <div class="left-column">
-            <div class="github-container">
+            <div class="link-container">
                 <a href="https://github.com/kstad21/CSE30-Computer-Organization-and-Systems-Programming/tree/main/Cstrings-csv" class="github-link" target="_blank">
                     <i class="fab fa-github icon"></i> Cstrings and csv processing
                 </a>
             </div>
-            <div class="github-container">
+            <div class="link-container">
                 <a href="https://github.com/kstad21/CSE30-Computer-Organization-and-Systems-Programming/tree/main/parking-database" class="github-link" target="_blank">
                     <i class="fab fa-github icon"></i> Parking database
                 </a> 
             </div>
-            <div class="github-container">
+            <div class="link-container">
                 <a href="https://github.com/kstad21/CSE30-Computer-Organization-and-Systems-Programming/tree/main/preprocessor-and-dfa" class="github-link" target="_blank">
                     <i class="fab fa-github icon"></i> C preprocessor and DFA
                 </a> 
             </div>
-            <div class="github-container">
+            <div class="link-container">
                 <a href="https://github.com/kstad21/CSE30-Computer-Organization-and-Systems-Programming/tree/main/cipher-in-C-and-assembly" class="github-link" target="_blank">
                     <i class="fab fa-github icon"></i> Cipher in C and assembly
                 </a> 
             </div>
         </div>
         <div class="right-column">
-            <h1 style="font-family: Arial; font-size: 36px">Purpose:</h1>
-            <p style="font-size: 18px">Practice working in Linux operating systems, use vim editor and shortcuts, write shell scripts, use version control software, learn debugging tools.</p>
-            <h1 style="font-family: Arial; font-size: 36px">Execution:</h1>
-            <p style="font-size: 18px">I completed many different lab reports and wrote them all out in markdown. My favorite parts were learning how a simple server works and learning Bash scripting! I also enjoyed working with others and helping my friends debug.</p>
+            <div class="scrollable-box">
+                <div class="tabs">
+                    <button class="tab-button" onclick="openTab(event, 'csv')">Cstrings, csv processing</button>
+                    <button class="tab-button" onclick="openTab(event, 'pd')">Parking database</button>
+                    <button class="tab-button" onclick="openTab(event, 'dfa')">C preprocessor and DFA</button>
+                    <button class="tab-button" onclick="openTab(event, 'cipher')">Cipher in C and assembly</button>
+                </div>
+                <div id="csv" class="tab-content">
+                    <h1 style="font-family: Arial; font-size: 25px">Purpose:</h1>
+                    <p style="font-size: 15px">Practice manipulating C strings by writing a program to process a csv-formatted file. See each file for a more specific description per file.</p>
+                    <h1 style="font-family: Arial; font-size: 25px">Execution:</h1>
+                    <p style="font-size: 15px">We were only allowed to use pointers and no indexing. Taking in input from the command line, we convert each argument to an integer and stored in an array. Then, using the arguments, we split the buffer to get only certain rows or columns. Finally, we write our csv rows to output.</p>
+                </div>
+                <div id="pd" class="tab-content">
+                    <h1 style="font-family: Arial; font-size: 25px">Purpose:</h1>
+                    <p style="font-size: 15px">blah</p>
+                    <h1 style="font-family: Arial; font-size: 25px">Execution:</h1>
+                    <p style="font-size: 15px">blah</p>
+                </div>
+                <div id="dfa" class="tab-content">
+                    <h1 style="font-family: Arial; font-size: 25px">Purpose:</h1>
+                    <p style="font-size: 15px">blah</p>
+                    <h1 style="font-family: Arial; font-size: 25px">Execution:</h1>
+                    <p style="font-size: 15px">blah</p>
+                </div>
+                <div id="cipher" class="tab-content">
+                    <h1 style="font-family: Arial; font-size: 25px">Purpose:</h1>
+                    <p style="font-size: 15px">blah</p>
+                    <h1 style="font-family: Arial; font-size: 25px">Execution:</h1>
+                    <p style="font-size: 15px">blah</p>
+                </div>
+            </div>
         </div>
     </div>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script>
+        function openTab(evt, tabId) {
+            let i;
+            let tabContent;
+            let tabButton;
+            tabContent = document.getElementsByClassName('tab-content');
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = 'none';  
+            }
+            tabButtons = document.getElementsByClassName('tab-button');
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(' active', '');
+            }
+            document.getElementById(tabId).style.display = 'block';
+            evt.currentTarget.className += ' active';
+        }
+
+        // Open the first tab by default
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.tab-button').click();
+        });
+    </script>
 </body>
 </html>
 
