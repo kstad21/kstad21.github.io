@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar">
         <div class="page-title">
-            Scheduling/tutoring software for the Content Tutoring Center
+            Increasing the user-friendliness of FAVITES, an end-to-end epidemic simulation
         </div>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -31,19 +31,24 @@
     </nav>
     <div class="container">
         <div class="left-column">
-            <div class="github-container">
-                <a href="https://github.com/kstad21/ctcenter" class="github-link" target="_blank">
-                    <i class="fab fa-github icon"></i> GitHub Repo
+            <div class="link-container">
+                <a href="https://github.com/kstad21/FAVITES-Lite/tree/main" class="github-link" target="_blank">
+                    <i class="fab fa-github icon"></i> GitHub Repo (FAVITES Fork)
+                </a>
+            </div>  
+            <div class="link-container">
+                <a href="https://niema.net/publication/2024-06-11-favites-lite-examples-viz" class="github-link" target="_blank">
+                    <i class="fas fa-file icon"></i> Pre-print
                 </a>
             </div>  
         </div>
         <div class="right-column">
             <h1 style="font-family: Arial; font-size: 36px">Purpose:</h1>
-            <p style="font-size: 18px">Provide a more centralized space for our tutoring center's information. Make searching for tutor appointments or attributes much faster and less labor intensive, rather than having to manually look through many different Google sheets.</p>
+            <p style="font-size: 18px">I worked with a UCSD professor to increase the accessibility for his epidemic simulation. End-to-end simulations require sometimes more than 50 difficult-to-find parameters, so they can be intimidating to approach.</p>
             <h1 style="font-family: Arial; font-size: 36px">Ideas:</h1>
-            <p style="font-size: 18px">I realized I could break down our center into different objects as long as I understood the relationships between them. For example, our whole organization is a Center, which has Tutors that have certain attributes. Tutors have multiple Sessions, which also have different attributes (like subjects and times). These all work together to create an environment in which tutors take appointments inside the Content Tutoring center.</p>
+            <p style="font-size: 18px">Configuration files for specific diseases and in-depth READMEs could help users reason through examples that they can apply to their own research. Then, they can run their own simulations by changing around parameters!</p>
             <h1 style="font-family: Arial; font-size: 36px">Execution:</h1>
-            <p style="font-size: 18px">Starting with the most simple functions, I started by defining the different objects and their relationships, then built in more and more functionality. To make things more useful, I added ways to import information through csvs, including attendance so that my appointment lookups would be up-to-date. Finally, I created a Main so that users could use the tool through the command line. Currently, I'm working on the front end and learning how to connect my backend Java to a front-end webpage.</p>
+            <p style="font-size: 18px">I reviewed literature to pull parameters for HIV and COVID. For example, I reviewed a paper about HIV progression for patients on ART and converted what I learned there into a Poisson process as a part of an already-created COVID network framework. For each parameter, I explained my reasoning. I also wrote a pre-print talking the improved user-friendliness of the simulation, along with my friend who created a webapp to visualize the simulated data. Check out the pre-print to the left!</p>
         </div>
     </div>
     

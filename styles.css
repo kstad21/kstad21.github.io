@@ -124,56 +124,27 @@ body {
     margin-top: 20px; /* To add some space below the navbar */
 }
 
-.scrollable-box {
-    font-family:'Courier New', Courier, monospace;
-    width: 600px; /* Set width of the box */
-    height: 600px; /* Set height of the box */
-    overflow: auto; /* Enable scrolling */
-    /*border: 1px solid #ccc;*/ /* Border for better visibility */
-    padding: 10px; /* Padding inside the box */
-    margin-top: 2%;
-    margin-left: 2%;
-    background-color: #ffffff; /* Background color inside the box */
-}
-
-pre {
-    margin: 0;
-}
-
-code {
-    display: flex;
-    white-space: pre-wrap; /* Ensures long lines wrap correctly */
-}
-
-.tabs {
-    display: flex;
-    border-bottom: 1px solid #ccc;
-}
-
-.tab-button {
-    background-color: #f1f1f1; /* Light background for tabs */
-    border: none;
-    outline: none;
-    padding: 10px;
-    cursor: pointer;
-    flex: 1;
-    text-align: center;
-}
-
-.tab-button:hover {
-    background-color: #ddd; /* Darker background on hover */
-}
-
-.tab-button.active {
-    background-color: #ccc; /* Background color for the active tab */
-}
-
-.tab-content {
-    display: none;
-    padding: 10px;
-}
-
 .page-title {
     position: absolute;
-    color:#ffffff;
+    color:rgb(214, 232, 255);
+    padding: 32px;
+    font-size: 25px;
+}
+
+.link-container {
+    padding: 20px;
+}
+
+.github-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}
+
+.github-link:hover {
+    color: #2bc6ff;
+}
+
+.icon {
+    margin-right: 8px;
 }
