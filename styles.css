@@ -134,6 +134,8 @@ body {
 .link-container {
     padding: 20px;
     background-color:#c5bcff;
+    border: none;
+    font-family: Garet;
 }
 
 .link-container:hover {
@@ -190,5 +192,9 @@ body {
 
 .tab-content {
     display: none;
+    padding: 10px;
+}
+
+.resume {
     padding: 10px;
 }
