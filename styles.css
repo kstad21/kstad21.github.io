@@ -133,6 +133,11 @@ body {
 
 .link-container {
     padding: 20px;
+    background-color:#c5bcff;
+}
+
+.link-container:hover {
+    background-color:#9e96ce;
 }
 
 .github-link {
@@ -142,7 +147,7 @@ body {
 }
 
 .github-link:hover {
-    color: #2bc6ff;
+    color: #003e54;
 }
 
 .icon {
